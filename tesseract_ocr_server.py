@@ -8,7 +8,7 @@ import os
 app = FastAPI()
 
 # Tesseract 설치 경로 설정 (OS에 따라 다를 수 있음)
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'/usr/bin/tesseract'
 
 # 이미지에서 텍스트 추출하는 엔드포인트
 @app.post('/ocr')
