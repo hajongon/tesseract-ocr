@@ -44,7 +44,7 @@ async def ocr_image(image: UploadFile = File(...)):
         processed_image = preprocess_image(pil_image)
         
         # Tesseract로 OCR 수행 (한국어)
-        extracted_text = pytesseract.image_to_string(processed_image, lang="kor")
+        extracted_text = pytesseract.image_to_string(processed_image, lang="kor+eng")
 
         # 추출된 텍스트를 JSON 형식으로 반환
         return {'extracted_text': extracted_text}
