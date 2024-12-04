@@ -24,7 +24,7 @@ def preprocess_image(image: Image.Image) -> Image.Image:
     
     # 4. 이미지 크기 조정 (OCR 성능 향상)
     width, height = image.size
-    image = image.resize((width * 2, height * 2), Image.ANTIALIAS)
+    image = image.resize((width * 2, height * 2), Image.Resampling.LANCZOS)  # ANTIALIAS 대신 LANCZOS 사용
     
     return image
 
